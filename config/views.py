@@ -9,7 +9,7 @@ from .permissions import SettingsPermission
 # Create your views here.
 
 
-class ConfigView(generics.RetrieveUpdateAPIView):
+class ConfigView(RetrieveUpdateAPIView):
     permission_classes = [SettingsPermission]
     serializer_class = serializers.ConfigSerializer
 
