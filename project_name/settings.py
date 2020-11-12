@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'fcm_django',
     'django_filters',
     'corsheaders',
-    'storages'
+    'storages',
+    'config.apps.ConfigConfig',
 ]
 
 MIDDLEWARE = [
@@ -119,7 +120,7 @@ REST_FRAMEWORK = {
     'DATETIME_FORMAT': "%Y-%m-%d %H:%M",
     'TIME_FORMAT': "%H:%M",
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
-    # 'DEFAULT_PAGINATION_CLASS': 'academy.pagination.PageNumberPaginationCustomSize',
+    'DEFAULT_PAGINATION_CLASS': 'config.paginator.PageNumberPaginationCustomSize',
     'PAGE_SIZE': 50,
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend',
                                 'rest_framework.filters.SearchFilter',
